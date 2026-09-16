@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2026 국립경국대학교 잡 페스티벌</title>
+<meta name="description" content="2026 국립경국대학교 잡 페스티벌 | 2026.9.30.(수)–10.1.(목) 국립경국대학교 안동캠퍼스 체육관">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#26408f;        /* poster royal blue */
+  --blue-deep:#1b2f6e;
+  --bubble:#2f8bd3;      /* bubble mid blue */
+  --sky:#74c9ee;         /* poster accent band */
+  --paper:#f3f5f9;       /* poster white texture */
+  --ink:#141d3b;
+  --muted:#5a6583;
+  --line:#d6dcea;
+  --surface:#ffffff;
+  --bg:#f3f5f9;
+  --on-blue:#ffffff;
+  --shadow:0 18px 40px -24px rgba(27,47,110,.45);
+  --display:"Outfit","Noto Sans KR",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --wrap:1180px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#e8ecf7;--muted:#a3adc8;--line:#2c3a66;--surface:#141e42;--bg:#0d1532;--paper:#141e42;
+    --shadow:0 18px 40px -24px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e8ecf7;--muted:#a3adc8;--line:#2c3a66;--surface:#141e42;--bg:#0d1532;--paper:#141e42;
+  --shadow:0 18px 40px -24px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ---------- Top info bar ---------- */
+.topbar{background:var(--blue-deep);color:#cfdaf5;font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:7px;padding-bottom:7px;flex-wrap:wrap}
+.topbar b{color:#fff;font-weight:500}
+
+/* ---------- Header / Nav ---------- */
+header.site{position:sticky;top:0;z-index:50;background:var(--blue);color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand-mark{font-family:var(--display);font-weight:900;font-size:22px;letter-spacing:-.5px;background:#fff;color:var(--blue);padding:2px 10px;line-height:1.3}
+.brand-text{font-size:14px;line-height:1.25}
+.brand-text strong{display:block;font-size:15px}
+nav.main{display:flex;gap:2px}
+nav.main a{text-decoration:none;font-size:15px;font-weight:500;padding:8px 13px;border-radius:999px;opacity:.85;transition:background .2s,opacity .2s}
+nav.main a:hover{opacity:1;background:rgba(255,255,255,.12)}
+nav.main a.active{opacity:1;background:#fff;color:var(--blue)}
+.nav-tools{display:flex;gap:8px;align-items:center}
+.icon-btn{background:rgba(255,255,255,.12);border:0;color:#fff;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:17px}
+.menu-btn{display:none}
+@media (max-width:980px){
+  nav.main{position:fixed;inset:68px 0 auto 0;flex-direction:column;background:var(--blue);padding:10px 16px 20px;transform:translateY(-120%);transition:transform .3s;box-shadow:0 20px 30px rgba(0,0,0,.25)}
+  nav.main.open{transform:translateY(0)}
+  nav.main a{padding:12px 14px}
+  .menu-btn{display:grid}
+  .brand-text{display:none}
+}
+
+/* ---------- Page routing ---------- */
+.page{display:none}
+.page.active{display:block;animation:pageIn .35s ease}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+
+/* ---------- Bubbles (poster motif) ---------- */
+.bubble{position:absolute;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle at 30% 28%,rgba(255,255,255,.55) 0 8%,rgba(255,255,255,0) 22%),
+             radial-gradient(circle at 60% 65%,rgba(47,139,211,.95),rgba(38,64,143,.6) 70%);
+  box-shadow:inset -10px -14px 30px rgba(14,30,80,.45),inset 8px 10px 20px rgba(255,255,255,.25)}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:var(--blue);color:#fff;overflow:hidden;padding:64px 0 0}
+.hero-letters{position:absolute;right:-40px;top:-60px;font-family:var(--display);font-weight:600;font-size:clamp(260px,38vw,560px);line-height:.78;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:0;user-select:none;pointer-events:none;display:flex;flex-direction:column;align-items:flex-end}
+.hero-letters span{color:#fff;opacity:.96}
+.hero-letters .o{position:relative}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end;min-height:560px}
+.hero-copy{position:relative;z-index:2;padding-bottom:64px}
+.fest-tag{display:inline-block;background:#fff;color:var(--blue);font-family:var(--display);font-weight:900;font-size:clamp(28px,4vw,44px);letter-spacing:.02em;padding:0 16px;line-height:1.35;margin-bottom:22px}
+.hero h1{font-size:clamp(38px,5.4vw,68px);font-weight:900;line-height:1.12;letter-spacing:-.03em}
+.hero-date{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.6vw,44px);margin-top:26px;letter-spacing:-.02em;line-height:1.1}
+.hero-date small{font-family:var(--body);font-size:.5em;font-weight:700}
+.hero-place{font-size:clamp(18px,2vw,23px);font-weight:300;margin-top:8px;line-height:1.45}
+.hero-band{display:inline-block;margin-top:22px;background:var(--sky);color:var(--blue-deep);font-weight:900;font-size:clamp(17px,1.8vw,22px);padding:6px 14px}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:0;border-radius:999px;padding:13px 24px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn-white{background:#fff;color:var(--blue)}
+.btn-white:hover{background:var(--sky)}
+.btn-ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.6)}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-deep)}
+.hero-side{position:relative;z-index:2;padding-bottom:64px;display:flex;justify-content:flex-end}
+.tagline-vert{writing-mode:vertical-rl;font-size:clamp(20px,2.2vw,30px);font-weight:500;letter-spacing:.02em;position:absolute;right:0;top:-10px}
+.tagline-vert b{color:var(--sky);font-weight:900}
+.meet{background:var(--blue);padding:18px 22px;font-size:clamp(20px,2.4vw,30px);line-height:1.35;font-weight:300;max-width:360px;margin-right:80px}
+.meet b{font-weight:900}
+
+/* Countdown strip */
+.countdown{position:relative;z-index:3;background:#fff;color:var(--blue);display:grid;grid-template-columns:auto 1fr;align-items:center}
+.cd-label{background:var(--sky);color:var(--blue-deep);font-weight:900;padding:22px 26px;font-size:17px;line-height:1.3}
+.cd-units{display:flex;justify-content:space-around;padding:12px 16px;gap:8px}
+.cd-unit{text-align:center;min-width:70px}
+.cd-num{font-family:var(--display);font-weight:800;font-size:clamp(30px,4vw,46px);line-height:1;font-variant-numeric:tabular-nums}
+.cd-txt{font-size:13px;color:#5a6583;margin-top:4px}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-side{display:none}
+  .hero-letters{opacity:.18;right:-80px}
+  .countdown{grid-template-columns:1fr}
+  .cd-label{text-align:center;padding:12px}
+}
+
+/* ---------- Sections ---------- */
+section.block{padding:84px 0}
+section.alt{background:var(--surface)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:38px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(28px,3.2vw,40px);font-weight:900;letter-spacing:-.03em;line-height:1.2}
+.sec-head h2 .en{display:block;font-family:var(--display);font-weight:800;font-size:.46em;color:var(--bubble);letter-spacing:.02em;margin-bottom:6px}
+.sec-head p{color:var(--muted);max-width:520px}
+.page-hero{background:var(--blue);color:#fff;padding:70px 0 60px;position:relative;overflow:hidden}
+.page-hero h1{font-size:clamp(34px,4.5vw,54px);font-weight:900;letter-spacing:-.03em;line-height:1.15;position:relative}
+.page-hero .en{font-family:var(--display);font-weight:800;color:var(--sky);font-size:18px;display:block;margin-bottom:8px}
+.page-hero p{margin-top:12px;opacity:.85;max-width:620px;position:relative}
+.crumb{font-size:13px;opacity:.7;margin-bottom:18px;position:relative}
+
+/* Key dates (conference style) */
+.dates{display:grid;grid-template-columns:repeat(4,1fr);border-top:3px solid var(--blue)}
+.date-item{padding:22px 20px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.date-item:last-child{border-right:0}
+.date-item .d{font-family:var(--display);font-weight:800;font-size:26px;color:var(--blue);line-height:1.2}
+:root[data-theme="dark"] .date-item .d{color:var(--sky)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .date-item .d{color:var(--sky)}}
+.date-item .t{font-weight:700;margin-top:6px}
+.date-item .s{font-size:14px;color:var(--muted)}
+@media (max-width:860px){.dates{grid-template-columns:1fr 1fr}.date-item:nth-child(2){border-right:0}}
+
+/* Highlight events (emphasis) */
+.highlights{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:20px}
+.hl{position:relative;overflow:hidden;padding:30px 28px 28px;color:#fff;min-height:290px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none}
+.hl-1{background:var(--blue)}
+.hl-2{background:var(--bubble)}
+.hl-3{background:var(--blue-deep)}
+.hl h3{font-size:clamp(24px,2.4vw,32px);font-weight:900;line-height:1.2;letter-spacing:-.02em;position:relative}
+.hl p{position:relative;margin-top:8px;opacity:.9;font-size:15px}
+.hl .big-ico{position:absolute;top:22px;right:24px;font-size:56px;line-height:1}
+.hl .go{position:relative;margin-top:18px;font-weight:700;font-size:14px;background:#fff;color:var(--blue);align-self:flex-start;padding:7px 14px;border-radius:999px}
+.hl:hover .go{background:var(--sky)}
+.hl-1 .flag{position:relative;background:var(--sky);color:var(--blue-deep);font-weight:900;align-self:flex-start;padding:3px 10px;margin-bottom:12px;font-size:14px}
+@media (max-width:900px){.highlights{grid-template-columns:1fr}}
+
+/* Program timeline (poster style) */
+.prog-line{position:relative;display:grid;grid-template-columns:repeat(5,1fr);margin-top:10px}
+.prog-line::before{content:"";position:absolute;left:-24px;right:-24px;top:74px;height:2px;background:var(--line)}
+.prog-item{text-align:center;padding:0 10px;position:relative}
+.prog-item .ico{width:52px;height:52px;margin:0 auto;display:grid;place-items:center;color:var(--blue)}
+:root[data-theme="dark"] .prog-item .ico{color:var(--sky)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .prog-item .ico{color:var(--sky)}}
+.prog-item .dot{width:12px;height:12px;border-radius:50%;background:var(--blue);margin:12px auto 18px;box-shadow:0 0 0 5px var(--bg)}
+section.alt .prog-item .dot{box-shadow:0 0 0 5px var(--surface)}
+.prog-item h4{font-size:18px;font-weight:700;line-height:1.35}
+.prog-item p{font-size:14px;color:var(--muted);margin-top:8px}
+@media (max-width:860px){.prog-line{grid-template-columns:1fr 1fr;row-gap:30px}.prog-line::before{display:none}}
+
+/* Video */
+.video-box{position:relative;aspect-ratio:16/9;background:var(--blue-deep);overflow:hidden;display:grid;place-items:center;color:#fff}
+.video-box iframe,.video-box video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-ph{position:relative;text-align:center;padding:24px}
+.play{width:92px;height:92px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;margin:0 auto 18px;border:0;font-size:32px;transition:transform .2s}
+.play:hover{transform:scale(1.07)}
+.video-ph h3{font-size:clamp(20px,2.4vw,28px);font-weight:900}
+.video-ph p{opacity:.75;font-size:14px;margin-top:6px}
+.video-meta{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-top:0;background:var(--surface)}
+.video-meta div{padding:16px 20px;border-right:1px solid var(--line)}
+.video-meta div:last-child{border-right:0}
+.video-meta b{display:block;font-family:var(--display);font-size:26px;color:var(--bubble);line-height:1.2}
+.video-meta span{font-size:14px;color:var(--muted)}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}
+.thumb{aspect-ratio:4/3;background:linear-gradient(135deg,var(--bubble),var(--blue));display:grid;place-items:center;color:#fff;font-size:13px;text-align:center;padding:8px;opacity:.85}
+@media (max-width:700px){.video-meta{grid-template-columns:1fr}.video-meta div{border-right:0;border-bottom:1px solid var(--line)}.thumbs{grid-template-columns:1fr 1fr}}
+
+/* Universities strip */
+.unis{display:flex;flex-wrap:wrap;justify-content:center;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.unis span{padding:18px 24px;font-size:17px;color:var(--muted);position:relative}
+.unis span+span::before{content:"";position:absolute;left:0;top:50%;height:18px;width:1px;background:var(--line);transform:translateY(-50%)}
+.organizers{text-align:center;margin-top:20px;font-weight:700;color:var(--blue);display:flex;gap:26px;justify-content:center;flex-wrap:wrap}
+:root[data-theme="dark"] .organizers{color:var(--sky)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .organizers{color:var(--sky)}}
+
+/* About */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+@media (max-width:860px){.two-col{grid-template-columns:1fr;gap:28px}}
+.lead{font-size:clamp(20px,2.2vw,26px);font-weight:700;line-height:1.5;letter-spacing:-.02em}
+.prose p+p{margin-top:14px}
+.prose p{color:var(--muted)}
+.info-table{width:100%;border-collapse:collapse;border-top:3px solid var(--blue)}
+.info-table th,.info-table td{text-align:left;padding:15px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+.info-table th{width:120px;font-weight:700;background:rgba(116,201,238,.12);white-space:nowrap}
+.notice{margin-top:28px;padding:22px 24px;background:rgba(116,201,238,.16);border-left:5px solid var(--bubble)}
+.notice h4{font-size:17px;margin-bottom:6px}
+.notice ul{padding-left:18px;color:var(--muted)}
+
+/* Program page */
+.tabs{display:flex;gap:8px;margin-bottom:26px;flex-wrap:wrap}
+.tab{border:2px solid var(--blue);background:transparent;color:var(--ink);padding:10px 22px;border-radius:999px;font-weight:700;font-size:15px}
+.tab[aria-selected="true"]{background:var(--blue);color:#fff}
+.schedule{border-top:3px solid var(--blue)}
+.slot{display:grid;grid-template-columns:170px 1fr;border-bottom:1px solid var(--line)}
+.slot-time{padding:22px 16px;font-family:var(--display);font-weight:800;font-size:20px;color:var(--blue);line-height:1.3}
+:root[data-theme="dark"] .slot-time{color:var(--sky)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .slot-time{color:var(--sky)}}
+.slot-time small{display:block;font-family:var(--body);font-weight:500;font-size:13px;color:var(--muted)}
+.slot-body{padding:18px 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.session{background:var(--surface);border:1px solid var(--line);padding:14px 16px;cursor:pointer;text-align:left;color:var(--ink);font-size:15px;transition:border-color .2s}
+.session:hover{border-color:var(--bubble)}
+.session .where{display:block;font-size:12px;color:var(--muted);margin-bottom:3px}
+.session b{font-size:16px}
+.session.lunch{background:transparent;border-style:dashed;cursor:default}
+.session.key{background:var(--blue);color:#fff;border-color:var(--blue)}
+.session.key .where{color:#cfe0ff}
+@media (max-width:700px){.slot{grid-template-columns:1fr}.slot-time{padding-bottom:0}}
+.booths{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.booth{background:var(--surface);border:1px solid var(--line);padding:20px;position:relative}
+.booth .n{font-family:var(--display);font-weight:800;color:var(--bubble);font-size:14px}
+.booth h4{font-size:17px;margin:4px 0 6px;line-height:1.35}
+.booth p{font-size:14px;color:var(--muted)}
+
+/* Companies */
+.filters{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.search{flex:1 1 260px;display:flex;align-items:center;gap:8px;border:2px solid var(--line);background:var(--surface);padding:0 14px;border-radius:999px}
+.search input{border:0;background:transparent;padding:12px 0;font-size:15px;width:100%;color:var(--ink);font-family:inherit}
+.search input:focus{outline:none}
+.search:focus-within{border-color:var(--bubble)}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:999px;font-size:14px;font-weight:500}
+.chip[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+.result-count{font-size:14px;color:var(--muted);margin-bottom:12px}
+.co-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.co{background:var(--surface);border:1px solid var(--line);padding:18px 18px 16px;display:flex;flex-direction:column;gap:6px;position:relative}
+.co-top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.co h4{font-size:17px;line-height:1.35}
+.co .region{font-size:13px;color:var(--muted)}
+.co .biz{font-size:14px;color:var(--muted);flex:1}
+.badges{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.badge{font-size:12px;font-weight:700;padding:2px 8px;border-radius:4px;background:rgba(116,201,238,.22);color:var(--ink)}
+.badge.both{background:var(--blue);color:#fff}
+.badge.talk{background:var(--sky);color:var(--blue-deep)}
+.badge.new{background:transparent;box-shadow:inset 0 0 0 1px var(--bubble);color:var(--bubble)}
+.star{border:0;background:transparent;font-size:22px;line-height:1;color:var(--line);padding:2px}
+.star[aria-pressed="true"]{color:#f4b400}
+.empty{padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line)}
+.fav-bar{position:sticky;bottom:16px;margin-top:22px;background:var(--blue);color:#fff;padding:12px 18px;border-radius:999px;display:flex;justify-content:space-between;align-items:center;gap:10px;box-shadow:var(--shadow);font-size:14px}
+.fav-bar button{background:#fff;color:var(--blue);border:0;border-radius:999px;padding:6px 14px;font-weight:700}
+
+/* Events */
+.event-feature{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:26px;background:var(--surface);border:1px solid var(--line)}
+.event-feature .vis{background:var(--blue);color:#fff;position:relative;overflow:hidden;padding:36px;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end}
+.event-feature .vis h2{font-size:clamp(28px,3.4vw,42px);font-weight:900;line-height:1.15;letter-spacing:-.03em;position:relative}
+.event-feature .vis .kicker{position:relative;background:var(--sky);color:var(--blue-deep);font-weight:900;align-self:flex-start;padding:3px 10px;margin-bottom:12px}
+.event-feature .txt{padding:32px 34px}
+.event-feature .txt h3{font-size:19px;margin-bottom:10px}
+.event-feature .txt ol,.event-feature .txt ul{padding-left:20px;color:var(--muted)}
+.event-feature .txt li{margin:5px 0}
+.event-feature.rev .vis{order:2;background:var(--bubble)}
+.event-feature.deep .vis{background:var(--blue-deep)}
+@media (max-width:860px){.event-feature{grid-template-columns:1fr}.event-feature.rev .vis{order:0}}
+
+/* Stamp card */
+.stamp-card{background:var(--paper);border:2px dashed var(--bubble);padding:22px;margin-top:16px}
+.stamp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+.stamp{aspect-ratio:1;border-radius:50%;border:2px dashed var(--line);background:var(--surface);display:grid;place-items:center;font-size:12px;text-align:center;padding:6px;color:var(--muted);line-height:1.25;position:relative;transition:transform .2s}
+.stamp.on{border:0;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.55) 0 8%,rgba(255,255,255,0) 24%),radial-gradient(circle at 60% 65%,var(--bubble),var(--blue) 75%);color:#fff;font-weight:700;animation:stampIn .35s ease}
+@keyframes stampIn{0%{transform:scale(1.35) rotate(-12deg)}100%{transform:scale(1) rotate(0)}}
+.progress{height:10px;background:var(--line);border-radius:99px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--sky);transition:width .4s}
+.stamp-msg{font-size:14px;margin-top:10px;font-weight:700;min-height:1.6em}
+
+/* Draw machine */
+.draw{margin-top:16px;text-align:center}
+.draw-window{background:var(--blue-deep);color:#fff;font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,40px);padding:18px;letter-spacing:.05em;font-variant-numeric:tabular-nums;margin-bottom:12px;border:4px solid var(--sky)}
+.draw-note{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* Interview steps */
+.steps{counter-reset:s;list-style:none;padding:0!important}
+.steps li{counter-increment:s;position:relative;padding-left:44px!important;margin:12px 0!important}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:14px}
+.check{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.check label{display:flex;gap:10px;align-items:center;cursor:pointer;padding:9px 12px;border:1px solid var(--line);background:var(--bg)}
+.check input{width:18px;height:18px;accent-color:var(--blue)}
+.check label.done{text-decoration:line-through;color:var(--muted)}
+
+/* Venue */
+.map{position:relative;background:var(--surface);border:1px solid var(--line);padding:18px}
+.map svg{display:block;width:100%;height:auto}
+.zone{cursor:pointer;transition:opacity .2s}
+.zone:hover{opacity:.85}
+.zone-info{margin-top:14px;padding:16px;background:var(--bg);min-height:84px;border-left:4px solid var(--sky)}
+.transport{display:grid;gap:12px}
+.tr{display:grid;grid-template-columns:56px 1fr;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.tr .ic{width:56px;height:56px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:24px}
+
+/* FAQ */
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:700;font-size:17px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:6px;top:14px;font-size:28px;font-weight:300;color:var(--bubble);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 0 20px;color:var(--muted)}
+.contact-card{background:var(--blue);color:#fff;padding:32px;position:relative;overflow:hidden}
+.contact-card h3{font-size:24px;font-weight:900;position:relative}
+.contact-card .tel{font-family:var(--display);font-weight:800;font-size:clamp(28px,3.4vw,38px);margin:14px 0 4px;position:relative;letter-spacing:-.01em}
+.contact-card p{position:relative;opacity:.85}
+.contact-card .btn{position:relative;margin-top:18px}
+
+/* Always-on strip & timetable extras */
+.allday{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:var(--surface);margin-bottom:28px}
+.allday div{padding:16px 20px;border-right:1px solid var(--line)}
+.allday div:last-child{border-right:0}
+.allday b{display:block;font-family:var(--display);font-size:22px;color:var(--bubble);line-height:1.2}
+.allday span{font-size:14px;color:var(--muted)}
+@media (max-width:700px){.allday{grid-template-columns:1fr}.allday div{border-right:0;border-bottom:1px solid var(--line)}}
+a.session{text-decoration:none;display:block}
+.session.plain{cursor:default}
+.session.plain:hover{border-color:var(--line)}
+button.badge{border:0;cursor:pointer;font-family:inherit}
+button.badge:hover{background:var(--bubble)}
+
+/* Venue maps */
+.venue-grid{align-items:start}
+.cm-road{fill:none;stroke:var(--muted);stroke-width:3;stroke-linecap:round;opacity:.5}
+.cm-dot circle{fill:var(--surface);stroke:var(--muted);stroke-width:3}
+.cm-track{fill:none;stroke:var(--muted);stroke-width:3}
+.cm-field{fill:none;stroke:var(--muted);stroke-width:1.5}
+.cm-bld{fill:var(--bg);stroke:var(--muted);stroke-width:1.5}
+.cm-gym{fill:var(--blue)}
+.cm-pin{fill:#f39a3d}
+.cm-walk{fill:none;stroke:#4cb8e0;stroke-width:5;stroke-linejoin:round;stroke-linecap:round}
+.cm-bus{fill:none;stroke:#4fae5e;stroke-width:5;stroke-linejoin:round;stroke-linecap:round}
+.cm-t{fill:var(--ink);font-size:12px;font-family:var(--body)}
+.cm-t.s{font-size:10px}
+.cm-gate{fill:#4cb8e0;font-size:22px;font-weight:900;font-family:var(--body)}
+.lo-hall{fill:none;stroke:var(--muted);stroke-width:2}
+.lo-gap{fill:var(--surface)}
+.lo-soft{fill:var(--bg);stroke:var(--muted);stroke-width:1.2}
+.lo-seat{fill:rgba(116,201,238,.22)}
+.lo-bar{fill:var(--muted)}
+.lo-t{fill:var(--ink);font-size:13px;font-family:var(--body)}
+.lo-t.s{font-size:10px}
+.booth-g{cursor:pointer}
+.booth-g:hover rect{opacity:.8}
+.legend{display:flex;gap:8px 16px;flex-wrap:wrap;font-size:13px;margin-top:12px;color:var(--muted)}
+.legend i{display:inline-block;width:22px;height:5px;vertical-align:middle;margin-right:6px;border-radius:3px}
+.legend i.sq{width:14px;height:14px}
+.layout-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:start}
+@media (max-width:900px){.layout-grid{grid-template-columns:1fr}}
+.booth-select{width:100%;padding:12px 14px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font-family:inherit;font-size:15px;border-radius:8px}
+.map-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn-sm{padding:7px 14px;font-size:13px}
+.btn-line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.btn-line:hover{box-shadow:inset 0 0 0 2px var(--bubble)}
+.ebooth{list-style:none;margin-top:10px}
+.ebooth li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.ebooth b{color:#d9577f;margin-right:6px}
+
+/* Footer */
+footer{background:var(--blue-deep);color:#b9c6ea;padding:48px 0 30px;font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+footer strong{color:#fff}
+footer .f-links{display:flex;gap:16px;flex-wrap:wrap}
+footer .f-links a{text-decoration:none}
+footer .f-links a:hover{color:#fff}
+footer .copy{margin-top:28px;padding-top:18px;border-top:1px solid rgba(255,255,255,.12);font-size:12px}
+
+/* Modal & toast */
+.modal{position:fixed;inset:0;background:rgba(10,18,50,.6);display:none;place-items:center;z-index:100;padding:20px}
+.modal.open{display:grid}
+.modal-box{background:var(--surface);color:var(--ink);max-width:520px;width:100%;padding:30px;position:relative;border-top:6px solid var(--sky)}
+.modal-box h3{font-size:22px;margin-bottom:6px;padding-right:30px}
+.modal-box .where{color:var(--bubble);font-weight:700;font-size:14px;margin-bottom:12px}
+.modal-box p{color:var(--muted)}
+.modal-close{position:absolute;top:14px;right:14px;border:0;background:transparent;font-size:26px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:999px;font-size:14px;z-index:120;transition:transform .3s}
+.toast.show{transform:translate(-50%,0)}
+.to-top{position:fixed;right:18px;bottom:18px;z-index:40;opacity:0;pointer-events:none;transition:opacity .2s;background:var(--sky);color:var(--blue-deep);border:0;width:46px;height:46px;border-radius:50%;font-size:18px;font-weight:900;box-shadow:var(--shadow)}
+.to-top.show{opacity:1;pointer-events:auto}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><b>2026.9.30.(수) – 10.1.(목)</b> 10:00–17:00 · 국립경국대학교 안동캠퍼스 체육관</span>
+    <span>문의 054-820-7082, 6371 (취업진로지원과)</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#home" class="brand" aria-label="잡 페스티벌 홈">
+      <span class="brand-mark">JOB</span>
+      <span class="brand-text"><strong>국립경국대학교 잡 페스티벌</strong>2026 경북 북부권 청년 취업·채용 박람회</span>
+    </a>
+    <nav class="main" id="nav" aria-label="주요 메뉴">
+      <a href="#home">홈</a>
+      <a href="#about">행사 소개</a>
+      <a href="#program">프로그램</a>
+      <a href="#companies">참가기업</a>
+      <a href="#events">현장 이벤트</a>
+      <a href="#venue">오시는 길</a>
+      <a href="#contact">FAQ·문의</a>
+    </nav>
+    <div class="nav-tools">
+      <button class="icon-btn" id="themeBtn" aria-label="화면 테마 전환">◐</button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<div class="page" id="page-home">
+  <section class="hero">
+    <div class="bubble" style="width:420px;height:420px;left:-120px;top:-90px;opacity:.55"></div>
+    <div class="bubble" style="width:220px;height:220px;left:34%;top:62%;opacity:.8"></div>
+    <div class="bubble" style="width:120px;height:120px;left:4%;top:78%;opacity:.6"></div>
+    <div class="hero-letters" aria-hidden="true"><span>JO</span><span>B</span></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="fest-tag">FESTIVAL</span>
+          <h1>국립경국대학교<br>잡 페스티벌</h1>
+          <div class="hero-date">2026.9.30.<small>(수)</small>–10.1.<small>(목)</small></div>
+          <div class="hero-place">10:00–17:00<br>국립경국대학교 안동캠퍼스 체육관</div>
+          <div class="hero-band">우수기업 및 기관 40여 개 참가</div>
+          <div class="hero-cta">
+            <a class="btn btn-white" href="#companies">참가기업 살펴보기</a>
+            <a class="btn btn-ghost" href="#events">현장 이벤트 보기</a>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="tagline-vert">지역을 잇고, 미래를 여는 <b>글로컬 커리어 플랫폼</b></div>
+          <div class="meet"><b>기업과 인재</b>가 만나는<br>특별한 기회</div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap" style="padding:0">
+      <div class="countdown" role="timer" aria-live="off">
+        <div class="cd-label" id="cdLabel">개막까지</div>
+        <div class="cd-units">
+          <div class="cd-unit"><div class="cd-num" id="cdD">00</div><div class="cd-txt">일</div></div>
+          <div class="cd-unit"><div class="cd-num" id="cdH">00</div><div class="cd-txt">시간</div></div>
+          <div class="cd-unit"><div class="cd-num" id="cdM">00</div><div class="cd-txt">분</div></div>
+          <div class="cd-unit"><div class="cd-num" id="cdS">00</div><div class="cd-txt">초</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="en">Key Dates</span>주요 일정</h2></div>
+      <div class="dates">
+        <div class="date-item"><div class="d">9.30 (수)</div><div class="t">1일차 개막</div><div class="s">개회식 · 기업설명회(육군본부, 한국수력원자력 등)</div></div>
+        <div class="date-item"><div class="d">10.1 (목)</div><div class="t">2일차</div><div class="s">감사패 전달 · 기업설명회 · AI 면접 특강</div></div>
+        <div class="date-item"><div class="d">10:00–17:00</div><div class="t">운영 시간</div><div class="s">12:00–13:30 중식·휴식 · 16:30 경품추첨</div></div>
+        <div class="date-item"><div class="d">공결 처리</div><div class="t">행사 참여 학생</div><div class="s">현장 QR 설문조사 완료 시 인정</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="en">Don't Miss</span>현장에서만 누릴 수 있는 세 가지</h2>
+        <p>기업 부스를 돌며 서명을 모으고, 경품추첨에 참여하고, 인사담당자와 바로 면접·상담까지 이어가세요.</p>
+      </div>
+      <div class="highlights">
+        <a class="hl hl-1" href="#events" data-jump="interview">
+          <div class="bubble" style="width:260px;height:260px;right:-70px;top:-60px;opacity:.7"></div>
+          <span class="flag">채용 연계</span>
+          <h3>현장 면접 및<br>채용 상담</h3>
+          <p>참가기업 인사담당자와 1:1 입사지원 상담을 하고, 체육관 2층 현장 면접실에서 면접을 볼 수 있습니다.</p>
+          <span class="go">준비 체크리스트 보기</span>
+        </a>
+        <a class="hl hl-2" href="#events" data-jump="stamp">
+          <span class="big-ico" aria-hidden="true">◎</span>
+          <h3>부스 방문<br>미션 투어</h3>
+          <p>관심 기업 부스 4곳에서 상담받고 서명을 모아 보세요.</p>
+          <span class="go">미션 카드 미리 보기</span>
+        </a>
+        <a class="hl hl-3" href="#events" data-jump="draw">
+          <span class="big-ico" aria-hidden="true">★</span>
+          <h3>경품 추첨</h3>
+          <p>미션 투어를 마치면 경품쿠폰을 드립니다. 경품추첨은 매일 16:30에 진행됩니다.</p>
+          <span class="go">추첨 방식 보기</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="en">Program</span>프로그램</h2><a class="btn btn-blue" href="#program">시간표 전체 보기</a></div>
+      <div class="prog-line">
+        <div class="prog-item">
+          <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="5" y="4" width="14" height="17" rx="1.5"/><path d="M9 3h6v3H9zM8.5 10h7M8.5 13.5h7M8.5 17h5"/></svg></div>
+          <div class="dot"></div><h4>기업소개 및<br>채용 설명회</h4><p>우수기업 채용정보 및 기업 설명회</p>
+        </div>
+        <div class="prog-item">
+          <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12a8 8 0 1 1 3 6.2L4 20l1-3.3A8 8 0 0 1 4 12z"/><circle cx="9" cy="12" r=".8"/><circle cx="12" cy="12" r=".8"/><circle cx="15" cy="12" r=".8"/></svg></div>
+          <div class="dot"></div><h4>입사<br>지원상담</h4><p>이력서·자기소개서 및 1:1 취업상담</p>
+        </div>
+        <div class="prog-item">
+          <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="8" cy="7" r="3"/><path d="M3 20c0-3.5 2.2-6 5-6s5 2.5 5 6"/><circle cx="17" cy="10" r="2.5"/><path d="M13.5 20c.3-3 1.7-5 3.5-5s3.5 2 3.5 5"/></svg></div>
+          <div class="dot"></div><h4>인턴십·현장실습<br>연계 기업관</h4><p>인턴십 현장실습 기회 연계</p>
+        </div>
+        <div class="prog-item">
+          <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 3l7 7-4 1-4 4-1 4-2-2-5 5M9 11l4 4"/><path d="M8 10l6 6"/></svg></div>
+          <div class="dot"></div><h4>취업역량 강화<br>프로그램</h4><p>면접 컨설팅, 모의면접, 취업 특강 등</p>
+        </div>
+        <div class="prog-item">
+          <div class="ico"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div>
+          <div class="dot"></div><h4>체험<br>프로그램</h4><p>퍼스널컬러, 취업사진, 타로 등 다양한 체험</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="sketch">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span class="en">2025 Highlights</span>전년도 현장 스케치</h2>
+        <p>지난 잡 페스티벌의 열기를 영상으로 먼저 만나보세요.</p>
+      </div>
+      <!-- ▼ 영상 삽입 위치: 아래 .video-box 내부의 .video-ph를 <iframe> 또는 <video> 태그로 교체하세요.
+           예) <iframe src="https://www.youtube.com/embed/영상ID" title="2025 잡 페스티벌 현장 스케치" allowfullscreen></iframe>
+           또는 videoConfig.src 값에 주소를 넣으면 재생 버튼 클릭 시 자동으로 삽입됩니다. -->
+      <div class="video-box" id="videoBox">
+        <div class="bubble" style="width:300px;height:300px;left:-60px;bottom:-110px;opacity:.6"></div>
+        <div class="bubble" style="width:160px;height:160px;right:8%;top:10%;opacity:.5"></div>
+        <div class="video-ph">
+          <button class="play" id="playBtn" aria-label="현장 스케치 영상 재생">▶</button>
+          <h3>2025 국립경국대학교 잡 페스티벌 현장 스케치</h3>
+        </div>
+      </div>
+      <div class="video-meta">
+        <div><b>40여 개</b><span>2026 참가 기업·기관</span></div>
+        <div><b>11개</b><span>2026 신규 참가 기업·기관</span></div>
+        <div><b>6개 대학</b><span>경북 북부권 대학 연합</span></div>
+      </div>
+      <div class="thumbs" aria-label="현장 사진 자리">
+        <div class="thumb"><a href="2025_01.jpg" target="_blank"><img src="2025_01.jpg"></a></div>
+        <div class="thumb"><a href="2025_02.jpg" target="_blank"><img src="2025_02.jpg"></a></div>
+        <div class="thumb"><a href="2025_03.jpg" target="_blank"><img src="2025_03.jpg"></a></div>
+        <div class="thumb"><a href="2025_07.jpg" target="_blank"><img src="2025_07.jpg"></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="unis">
+        <span>국립경국대학교</span><span>경북전문대학교</span><span>가톨릭상지대학교</span><span>안동과학대학교</span><span>동양대학교</span><span>문경대학교</span>
+      </div>
+      <div class="organizers"><span>국립경국대학교 취업진로본부</span><span>대학일자리플러스센터</span><span>글로컬대학사업</span></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<div class="page" id="page-about">
+  <section class="page-hero">
+    <div class="bubble" style="width:280px;height:280px;right:-60px;top:-80px;opacity:.6"></div>
+    <div class="wrap"><div class="crumb">홈 / 행사 소개</div><span class="en">About</span><h1>행사 소개</h1><p>2026 경북 북부권 청년 취업·채용 박람회</p></div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div>
+        <p class="lead">경북 북부권 대학생과 지역 청년이 우수기업을 직접 만나고, 채용으로 이어지는 현장 중심의 취업박람회입니다.</p>
+        <div class="prose" style="margin-top:22px">
+          <p>산업과 채용환경의 변화에 선제적으로 대응하고, 미래 산업과 기업의 인재 수요에 맞는 취업지원 체계를 마련하기 위해 기획되었습니다.</p>
+          <p>다른 지역에 비해 취업지원 인프라가 부족한 경북 북부권 청년들에게 다양한 기업정보와 채용정보를 제공해 취업경쟁력을 높이고자 합니다.</p>
+          <p>기업은 필요한 인재를 발굴하고, 학생은 우수기업에 대한 취업의지를 키우며, 지역은 인력난 해소와 경북 북부권에 대한 관심 확대를 기대합니다.</p>
+        </div>
+      </div>
+      <div>
+        <table class="info-table">
+          <tr><th>행사명</th><td>2026 「국립경국대학교 잡 페스티벌」</td></tr>
+          <tr><th>기간</th><td>2026. 9. 30.(수) – 10. 1.(목), 10:00–17:00</td></tr>
+          <tr><th>장소</th><td>국립경국대학교 안동캠퍼스 체육관<br>(경북 안동시 경동로 1375)</td></tr>
+          <tr><th>참가대상</th><td>경북 북부권 대학(대학원) 재학생, 지역청년(졸업생, 고등학교 취업준비생 등)</td></tr>
+          <tr><th>참가대학</th><td>국립경국대학교(안동·예천캠퍼스), 가톨릭상지대학교, 경북전문대학교, 동양대학교, 문경대학교, 안동과학대학교, 기타 참가 희망 경북권 대학</td></tr>
+          <tr><th>참여기업</th><td>연간 채용계획이 있는 경북·대구 및 전국의 우수기업·기관 40여 개</td></tr>
+          <tr><th>주요내용</th><td>기업·채용설명회, 입사지원상담, 취업지원제도 안내, 인턴·현장실습 연계</td></tr>
+          <tr><th>주최·주관</th><td>국립경국대학교 취업진로본부 대학일자리플러스센터 / 글로컬대학사업</td></tr>
+        </table>
+        <div class="notice">
+          <h4>교수님·학과 협조 안내</h4>
+          <ul>
+            <li>행사 참여 학생은 현장 QR 설문조사를 완료하면 공결 처리됩니다(현장 QR은 매일 변경).</li>
+            <li>다양한 기업·직무를 현장에서 접하는 현장연계형 수업 기회로 활용해 주세요.</li>
+            <li>참여기업과의 교류로 현장실습·인턴십 연계와 산학협력 확대에 관심 부탁드립니다.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PROGRAM ================= -->
+<div class="page" id="page-program">
+  <section class="page-hero">
+    <div class="bubble" style="width:280px;height:280px;right:-60px;top:-80px;opacity:.6"></div>
+    <div class="wrap"><div class="crumb">홈 / 프로그램</div><span class="en">Program</span><h1>프로그램 시간표</h1><p>일자별·시간대별 기업설명회 참여 기업을 확인하세요. 기업명을 누르면 기업 정보와 부스 위치를 볼 수 있습니다.</p></div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="allday" aria-label="상시 운영 프로그램">
+        <div><b>10:00–17:00</b><span>입사지원(채용) 상담부스</span></div>
+        <div><b>10:30–16:00</b><span>기업(채용) 설명회</span></div>
+        <div><b>10:00–17:00</b><span>취업컨설팅 등 부대행사</span></div>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab ptab" role="tab" aria-selected="true" data-day="1">1일차 · 9.30(수)</button>
+        <button class="tab ptab" role="tab" aria-selected="false" data-day="2">2일차 · 10.1(목)</button>
+      </div>
+      <div class="schedule" id="schedule"></div>
+    </div>
+  </section>
+  <section class="block alt">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="en">Support Booths</span>취업지원 부스</h2><p>기업 부스 외에도 기관·부서별 지원 부스가 운영됩니다.</p></div>
+      <div class="booths" id="booths"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= COMPANIES ================= -->
+<div class="page" id="page-companies">
+  <section class="page-hero">
+    <div class="bubble" style="width:280px;height:280px;right:-60px;top:-80px;opacity:.6"></div>
+    <div class="wrap"><div class="crumb">홈 / 참가기업</div><span class="en">Exhibitors</span><h1>2026 참가 기업·기관</h1><p>관심 기업에 별표를 해 두면 이 브라우저에 저장되어 현장에서 동선을 짜기 편합니다.</p></div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+      <div class="filters">
+        <label class="search"><span aria-hidden="true">⌕</span><input id="coSearch" type="search" placeholder="기업명, 지역, 업종으로 검색"></label>
+      </div>
+      <div class="filters" id="sectorChips" aria-label="업종 필터"></div>
+      <div class="filters" id="flagChips" aria-label="참가 조건 필터">
+        <button class="chip" data-flag="d1" aria-pressed="false">9.30(수) 참가</button>
+        <button class="chip" data-flag="d2" aria-pressed="false">10.1(목) 참가</button>
+        <button class="chip" data-flag="talk" aria-pressed="false">채용설명회 진행</button>
+        <button class="chip" data-flag="new" aria-pressed="false">2026 신규</button>
+        <button class="chip" data-flag="fav" aria-pressed="false">★ 관심 기업</button>
+      </div>
+      <div class="result-count" id="coCount"></div>
+      <div class="co-grid" id="coGrid"></div>
+      <p style="font-size:13px;color:var(--muted);margin-top:16px">※ 참가 일자와 부스 번호는 리플렛 기준이며 변동될 수 있습니다. 부스 번호를 누르면 행사장 배치도에서 위치를 보여줍니다.</p>
+      <div class="fav-bar" id="favBar" hidden><span id="favText"></span><button id="favShow">관심 기업만 보기</button></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= EVENTS ================= -->
+<div class="page" id="page-events">
+  <section class="page-hero">
+    <div class="bubble" style="width:280px;height:280px;right:-60px;top:-80px;opacity:.6"></div>
+    <div class="wrap"><div class="crumb">홈 / 현장 이벤트</div><span class="en">On-site Events</span><h1>현장 이벤트</h1><p>현장 면접, 부스 방문 미션 투어, 경품추첨까지. 체육관에 오면 바로 참여할 수 있습니다.</p></div>
+  </section>
+  <section class="block">
+    <div class="wrap">
+
+      <div class="event-feature" id="ev-interview">
+        <div class="vis">
+          <div class="bubble" style="width:300px;height:300px;right:-80px;top:-80px;opacity:.7"></div>
+          <span class="kicker">채용 연계</span>
+          <h2>현장 면접 및<br>채용 상담</h2>
+        </div>
+        <div class="txt">
+          <h3>이렇게 참여하세요</h3>
+          <ol class="steps">
+            <li>참가기업 목록에서 지원하고 싶은 기업을 고릅니다.</li>
+            <li>체육관 기업 부스에서 인사담당자와 입사지원 상담을 받습니다.</li>
+            <li>기업별 안내에 따라 체육관 2층 현장 면접실에서 면접에 참여합니다.</li>
+            <li>대학일자리플러스센터 부스(H03)에서 이력서·자기소개서 컨설팅도 받을 수 있습니다.</li>
+          </ol>
+          <h3 style="margin-top:20px">현장 면접 준비 체크리스트</h3>
+          <div class="check" id="checklist"></div>
+        </div>
+      </div>
+
+      <div class="event-feature rev" id="ev-stamp">
+        <div class="vis">
+          <div class="bubble" style="width:240px;height:240px;left:-60px;top:-60px;opacity:.6"></div>
+          <span class="kicker">누구나 참여</span>
+          <h2>부스 방문<br>미션 투어</h2>
+        </div>
+        <div class="txt">
+          <h3>세 단계로 완료하세요</h3>
+          <ol class="steps">
+            <li>관심 있는 기업 부스에서 상담받고 기업 담당자 서명을 받습니다(총 4회).</li>
+            <li>운영본부(H02)에 준비된 QR로 설문조사를 작성합니다.</li>
+            <li>운영본부에서 서명과 설문조사를 확인받은 뒤 경품쿠폰을 받습니다.</li>
+          </ol>
+          <div class="stamp-card">
+            <strong>미션 카드 미리 체험</strong>
+            <div style="font-size:13px;color:var(--muted)">상담할 기업을 떠올리며 칸을 눌러 보세요. 실제 서명은 현장에서 받습니다.</div>
+            <div class="stamp-grid" id="stampGrid"></div>
+            <div class="progress"><i id="stampBar"></i></div>
+            <div class="stamp-msg" id="stampMsg"></div>
+            <button class="btn btn-blue" id="stampReset" style="padding:8px 16px;font-size:13px">처음부터 다시</button>
+          </div>
+          <div class="notice" style="margin-top:16px">
+            <h4>공결 안내</h4>
+            <ul><li>공결은 현장 QR을 통한 설문조사를 완료해야 인정됩니다.</li><li>현장 QR은 매일 바뀌니 참여한 날마다 작성하세요.</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-feature deep" id="ev-draw">
+        <div class="vis">
+          <div class="bubble" style="width:280px;height:280px;right:-60px;bottom:-90px;opacity:.6"></div>
+          <span class="kicker">경품 추첨</span>
+          <h2>행운의 주인공은<br>누구일까요?</h2>
+        </div>
+        <div class="txt">
+          <h3>경품 추첨 안내</h3>
+          <ul>
+            <li>미션 투어를 완료하면 운영본부에서 경품쿠폰을 받습니다.</li>
+            <li>경품추첨은 양일 모두 16:30–17:00에 진행됩니다.</li>
+            <li>경품 구성은 현장에서 안내합니다.</li>
+          </ul>
+          <div class="draw">
+            <div class="draw-window" id="drawWin" aria-live="polite">No. 000</div>
+            <button class="btn btn-blue" id="drawBtn">추첨 미리 체험하기</button>
+            <div class="draw-note">체험용 화면이며 실제 추첨 결과와 관계없습니다.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-head" style="margin-top:60px"><h2><span class="en">Experience</span>체험 부스</h2></div>
+      <div class="booths">
+        <div class="booth"><div class="n">E03</div><h4>퍼스널컬러</h4><p>나에게 가장 잘 어울리는 색상을 찾아봅니다.</p></div>
+        <div class="booth"><div class="n">E04</div><h4>면접사진</h4><p>이력서에 바로 쓸 수 있는 면접용 사진을 촬영합니다.</p></div>
+        <div class="booth"><div class="n">E01</div><h4>타로카드</h4><p>타로로 나와 맞는 직업을 찾아봅니다.</p></div>
+        <div class="booth"><div class="n">E02 · 9.30(수)</div><h4>지문적성검사</h4><p>동양대학교가 운영하는 지문 검사로 취업적성을 알아봅니다.</p></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= VENUE ================= -->
+<div class="page" id="page-venue">
+  <section class="page-hero">
+    <div class="bubble" style="width:280px;height:280px;right:-60px;top:-80px;opacity:.6"></div>
+    <div class="wrap"><div class="crumb">홈 / 오시는 길</div><span class="en">Venue</span><h1>오시는 길 · 행사장 안내</h1><p>국립경국대학교 안동캠퍼스 체육관 (경북 안동시 경동로 1375)</p></div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="en">Campus Map</span>체육관 위치</h2><p>정문으로 들어오거나 교내 시내버스 정류장에서 내려 체육관으로 오세요.</p></div>
+      <div class="two-col venue-grid">
+        <div class="map">
+          <svg viewBox="0 0 600 490" role="img" aria-label="국립경국대학교 안동캠퍼스 체육관 위치 약도">
+            <defs>
+              <marker id="arB" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4cb8e0"/></marker>
+              <marker id="arG" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4fae5e"/></marker>
+            </defs>
+            <g class="cm-road">
+              <path d="M20,440 L380,488"/>
+              <path d="M60,440 L275,345 L430,280 L585,205"/>
+              <path d="M430,280 L430,30"/>
+              <path d="M160,165 L430,150"/>
+              <path d="M300,30 L305,158"/>
+              <path d="M430,150 L540,70"/>
+            </g>
+            <g class="cm-dot"><circle cx="20" cy="440" r="6"/><circle cx="585" cy="205" r="6"/><circle cx="430" cy="30" r="6"/><circle cx="300" cy="30" r="6"/><circle cx="540" cy="70" r="6"/></g>
+            <g transform="rotate(-8 105 235)">
+              <rect class="cm-track" x="40" y="140" width="130" height="190" rx="65"/>
+              <rect class="cm-field" x="68" y="178" width="74" height="114"/>
+              <circle class="cm-field" cx="105" cy="235" r="12"/>
+              <text class="cm-t" x="105" y="266" text-anchor="middle">운동장</text>
+            </g>
+            <rect class="cm-bld" x="150" y="118" width="80" height="22"/><text class="cm-t" x="190" y="133" text-anchor="middle">가람관</text>
+            <g transform="rotate(-18 215 74)"><rect class="cm-bld" x="170" y="62" width="90" height="24"/><text class="cm-t" x="215" y="79" text-anchor="middle">사회학관</text></g>
+            <rect class="cm-bld" x="305" y="180" width="45" height="55"/><text class="cm-t" x="327" y="212" text-anchor="middle">어학원</text>
+            <rect class="cm-bld" x="455" y="182" width="60" height="42"/><text class="cm-t s" x="485" y="200" text-anchor="middle">정보</text><text class="cm-t s" x="485" y="213" text-anchor="middle">통신원</text>
+            <g transform="rotate(-22 361 281)"><rect class="cm-bld" x="331" y="270" width="60" height="22"/><text class="cm-t s" x="361" y="285" text-anchor="middle">솔뫼문화관</text></g>
+            <g transform="rotate(-25 481 318)"><rect class="cm-bld" x="445" y="305" width="72" height="26"/><text class="cm-t s" x="481" y="322" text-anchor="middle">창의인재관</text></g>
+            <g transform="rotate(-25 365 355)"><rect class="cm-bld" x="335" y="335" width="60" height="40"/><text class="cm-t s" x="365" y="359" text-anchor="middle">중앙도서관</text></g>
+            <g transform="rotate(-24 155 372)"><rect class="cm-bld" x="95" y="360" width="120" height="24"/><text class="cm-t s" x="155" y="376" text-anchor="middle">지역교육문화복합관</text></g>
+            <rect class="cm-gym" x="225" y="185" width="60" height="85"/><text x="255" y="236" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">체육관</text>
+            <path class="cm-walk" d="M90,427 L275,345 L430,280 L430,250 L294,250" marker-end="url(#arB)"/>
+            <path class="cm-bus" d="M275,345 L210,310 L210,238 L219,238" marker-end="url(#arG)"/>
+            <circle cx="275" cy="345" r="9" fill="#4fae5e"/><text x="275" y="349" text-anchor="middle" fill="#fff" font-size="10" font-weight="700">B</text>
+            <text class="cm-t s" x="292" y="372">시내버스</text>
+            <circle cx="90" cy="427" r="8" fill="#4cb8e0"/>
+            <text class="cm-gate" x="60" y="470">정문</text>
+            <path class="cm-pin" d="M255,178 c-9,-12 -13,-18 -13,-24 a13,13 0 1 1 26,0 c0,6 -4,12 -13,24z"/><circle cx="255" cy="154" r="5" fill="#fff"/>
+          </svg>
+          <div class="legend">
+            <span><i style="background:#4cb8e0"></i>정문 → 체육관</span>
+            <span><i style="background:#4fae5e"></i>시내버스 정류장 → 체육관</span>
+            <span><i class="sq" style="background:#f39a3d;border-radius:50%"></i>행사장(체육관)</span>
+          </div>
+        </div>
+        <div>
+          <div class="transport">
+            <div class="tr"><div class="ic">⌂</div><div><strong>주소</strong><p style="color:var(--muted)">경북 안동시 경동로 1375 국립경국대학교 체육관</p>
+              <div class="map-links">
+                <a class="btn btn-blue btn-sm" href="https://map.naver.com/p/search/국립경국대학교 안동캠퍼스 체육관" target="_blank" rel="noopener">네이버 지도</a>
+                <a class="btn btn-blue btn-sm" href="https://map.kakao.com/?q=국립경국대학교 안동캠퍼스 체육관" target="_blank" rel="noopener">카카오맵</a>
+                <button class="btn btn-line btn-sm" id="copyAddr">주소 복사</button>
+              </div></div></div>
+            <div class="tr"><div class="ic" style="background:#4cb8e0">⇡</div><div><strong>정문에서</strong><p style="color:var(--muted)">정문으로 들어와 지도의 파란 선을 따라 체육관으로 오세요.</p></div></div>
+            <div class="tr"><div class="ic" style="background:#4fae5e">B</div><div><strong>시내버스로</strong><p style="color:var(--muted)">교내 시내버스 정류장에서 내려 초록 선을 따라 오세요.</p></div></div>
+            <div class="tr"><div class="ic">☏</div><div><strong>현장 안내</strong><p style="color:var(--muted)">취업진로지원과 054-820-7082, 6371</p></div></div>
+          </div>
+          <div class="notice">
+            <h4>방문 전 확인하세요</h4>
+            <ul>
+              <li>행사 시간은 양일 모두 10:00–17:00입니다.</li>
+              <li>12:00–13:30은 중식·휴식 시간입니다.</li>
+              <li>현장 면접을 희망하면 이력서를 미리 출력해 오세요.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="layoutSec">
+    <div class="wrap">
+      <div class="sec-head"><h2><span class="en">Site Map</span>행사장 배치도</h2><p>일자를 고른 뒤 부스를 누르거나 목록에서 기업을 고르면 위치를 보여줍니다.</p></div>
+      <div class="tabs" role="tablist">
+        <button class="tab ltab" role="tab" aria-selected="true" data-lday="1">1일차 · 9.30(수)</button>
+        <button class="tab ltab" role="tab" aria-selected="false" data-lday="2">2일차 · 10.1(목)</button>
+      </div>
+      <div class="layout-grid">
+        <div class="map">
+          <svg viewBox="0 0 600 640" role="img" aria-label="체육관 행사장 배치도">
+            <rect class="lo-hall" x="20" y="20" width="560" height="570" rx="24"/>
+            <rect class="lo-gap" x="250" y="584" width="100" height="12"/>
+            <rect class="lo-soft" x="36" y="36" width="54" height="26"/><text class="lo-t" x="63" y="54" text-anchor="middle">콘솔</text>
+            <path class="lo-soft" d="M175,38 L425,38 L420,52 L180,52z"/><text class="lo-t s" x="300" y="49" text-anchor="middle">LED</text>
+            <rect class="lo-soft" x="200" y="52" width="200" height="52"/><text class="lo-t" x="300" y="83" text-anchor="middle">무대</text>
+            <rect class="lo-seat" x="130" y="118" width="340" height="78" rx="12"/><text class="lo-t" x="300" y="162" text-anchor="middle">관람석</text>
+            <text class="lo-t" x="301" y="221" text-anchor="middle">취업정보게시판</text><rect class="lo-bar" x="170" y="228" width="262" height="4"/>
+            <rect class="lo-seat" x="150" y="296" width="300" height="100" rx="12"/><text class="lo-t" x="300" y="350" text-anchor="middle">상담 테이블</text>
+            <text class="lo-t" x="303" y="505" text-anchor="middle">지원기관 · 운영본부</text>
+            <rect class="lo-soft" x="432" y="420" width="26" height="62"/><text class="lo-t s" x="445" y="448" text-anchor="middle">라벨</text><text class="lo-t s" x="445" y="462" text-anchor="middle">사진</text>
+            <text class="lo-t" x="300" y="614" text-anchor="middle" font-weight="700">▲ 입구</text>
+            <text class="lo-t s" x="578" y="634" text-anchor="end">2F 현장 면접실 별도 운영</text>
+            <g id="boothLayer"></g>
+          </svg>
+          <div class="legend">
+            <span><i class="sq" style="background:#26408f"></i>A 구역 기업·기관</span>
+            <span><i class="sq" style="background:#2f8bd3"></i>B 구역 기업·기관</span>
+            <span><i class="sq" style="background:#3a9a74"></i>H 지원기관·운영본부</span>
+            <span><i class="sq" style="background:#d9577f"></i>E 이벤트 부스</span>
+          </div>
+        </div>
+        <div>
+          <label for="boothSelect" style="font-weight:700;display:block;margin-bottom:6px">기업·기관 위치 찾기</label>
+          <select id="boothSelect" class="booth-select"></select>
+          <div class="zone-info" id="boothInfo" aria-live="polite"></div>
+          <h3 style="margin-top:26px;font-size:18px">이벤트 부스</h3>
+          <ul class="ebooth">
+            <li><b>E01</b>타로카드 · 타로로 나와 맞는 직업 찾기</li>
+            <li><b>E02</b>9.30 동양대학교 지문적성검사 · 10.1 안동형일자리사업단</li>
+            <li><b>E03</b>퍼스널컬러 · 나에게 어울리는 색상 찾기</li>
+            <li><b>E04</b>취업 증명사진 · 면접용 사진 촬영</li>
+          </ul>
+          <div class="notice">
+            <h4>꼭 알아두세요</h4>
+            <ul>
+              <li>현장 면접실은 체육관 2층에 별도로 운영됩니다.</li>
+              <li>미션 투어 확인과 경품쿠폰은 운영본부(H02)에서 받습니다.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="page" id="page-contact">
+  <section class="page-hero">
+    <div class="bubble" style="width:280px;height:280px;right:-60px;top:-80px;opacity:.6"></div>
+    <div class="wrap"><div class="crumb">홈 / FAQ·문의</div><span class="en">FAQ &amp; Contact</span><h1>자주 묻는 질문</h1></div>
+  </section>
+  <section class="block">
+    <div class="wrap two-col">
+      <div class="faq">
+        <details><summary>누가 참가할 수 있나요?</summary><p>경북 북부권 대학(대학원) 재학생과 졸업생, 고등학교 취업준비생 등 지역 청년 누구나 참가할 수 있습니다.</p></details>
+        <details><summary>사전 신청이 필요한가요?</summary><p>행사장은 자유롭게 방문할 수 있습니다. 소속 대학·학과의 단체 참여 안내가 있다면 그에 따라 주세요.</p></details>
+        <details><summary>수업 시간과 겹치면 어떻게 하나요?</summary><p>현장에 비치된 QR로 설문조사를 완료하면 공결이 인정됩니다. 현장 QR은 매일 바뀌니 참여한 날마다 작성하세요.</p></details>
+        <details><summary>현장 면접에는 무엇을 준비해야 하나요?</summary><p>이력서와 자기소개서 출력본, 단정한 복장을 권장합니다. 현장 면접실은 체육관 2층에 따로 마련됩니다.</p></details>
+        <details><summary>경품은 어떻게 받나요?</summary><p>관심 기업 부스 4곳에서 상담받고 서명을 모은 뒤, 운영본부(H02)에서 QR 설문조사를 확인받으면 경품쿠폰을 드립니다. 경품추첨은 매일 16:30–17:00에 진행됩니다.</p></details>
+        <details><summary>인턴십·현장실습 정보도 받을 수 있나요?</summary><p>인턴십·현장실습 연계 기업관에서 참여기업의 현장실습 기회를 안내합니다.</p></details>
+      </div>
+      <div>
+        <div class="contact-card">
+          <div class="bubble" style="width:200px;height:200px;right:-50px;bottom:-60px;opacity:.7"></div>
+          <h3>행사 문의</h3>
+          <div class="tel">054-820-7082</div>
+          <div class="tel" style="margin-top:0">054-820-6371</div>
+          <p>국립경국대학교 취업진로본부 취업진로지원과<br>경북 안동시 경동로 1375 국립경국대학교(체육관)</p>
+          <button class="btn btn-white" id="copyTel">대표번호 복사</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <div><strong>2026 국립경국대학교 잡 페스티벌</strong><br>국립경국대학교 취업진로본부 대학일자리플러스센터 · 글로컬대학사업<br>문의 054-820-7082, 6371</div>
+      <div class="f-links"><a href="#about">행사 소개</a><a href="#program">프로그램</a><a href="#companies">참가기업</a><a href="#events">현장 이벤트</a><a href="#venue">오시는 길</a></div>
+    </div>
+    <div class="copy">© 2026 Gyeongkuk National University. 본 페이지의 세부 일정과 참가기업은 변동될 수 있습니다.</div>
+  </div>
+</footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="mClose" aria-label="닫기">×</button>
+    <h3 id="mTitle"></h3><div class="where" id="mWhere"></div><p id="mDesc"></p>
+    <a class="btn btn-blue" id="mMap" href="#venue" style="margin-top:18px">배치도에서 위치 보기</a>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<button class="to-top" id="toTop" aria-label="맨 위로">↑</button>
+
+<script>
+/* ===== Config ===== */
+const videoConfig = { src: "https://www.youtube.com/embed/Q5Zbp0o97S8?autoplay=1" }; // 예: "https://www.youtube.com/embed/영상ID"
+const EVENT_START = new Date("2026-09-30T10:00:00+09:00");
+const EVENT_END   = new Date("2026-10-01T17:00:00+09:00");
+
+/* ===== Storage helpers ===== */
+const store = {
+  get(k, d){ try{ const v = localStorage.getItem(k); return v ? JSON.parse(v) : d; }catch(e){ return d; } },
+  set(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
+};
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+function toast(msg){ const t=$("#toast"); t.textContent=msg; t.classList.add("show"); clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove("show"),2200); }
+
+/* ===== Theme ===== */
+(function(){
+  const saved = store.get("jf-theme", null);
+  if(saved) document.documentElement.dataset.theme = saved;
+  $("#themeBtn").addEventListener("click",()=>{
+    const cur = document.documentElement.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark":"light");
+    const next = cur==="dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next; store.set("jf-theme", next);
+  });
+})();
+
+/* ===== Router ===== */
+const pages = ["home","about","program","companies","events","venue","contact"];
+let pendingJump = null, pendingBooth = null;
+function route(){
+  const h = (location.hash||"#home").slice(1);
+  const id = pages.includes(h) ? h : "home";
+  $$(".page").forEach(p=>p.classList.toggle("active", p.id==="page-"+id));
+  $$("nav.main a").forEach(a=>a.classList.toggle("active", a.getAttribute("href")==="#"+id));
+  $("#nav").classList.remove("open"); $("#menuBtn").setAttribute("aria-expanded","false");
+  if(pendingJump && id==="events"){
+    const el = document.getElementById("ev-"+pendingJump); pendingJump=null;
+    setTimeout(()=>el && el.scrollIntoView({behavior:"smooth",block:"start"}),60);
+  } else if(pendingBooth && id==="venue"){
+    layoutDay = pendingBooth.d; selBooth = pendingBooth.code; pendingBooth = null;
+    syncLayoutTabs(); renderLayout();
+    setTimeout(()=>$("#layoutSec").scrollIntoView({behavior:"smooth",block:"start"}),60);
+  } else window.scrollTo(0,0);
+  document.title = (id==="home" ? "" : $("nav.main a[href='#"+id+"']").textContent+" | ") + "2026 국립경국대학교 잡 페스티벌";
+}
+window.addEventListener("hashchange", route);
+$$("[data-jump]").forEach(a=>a.addEventListener("click",()=>{ pendingJump=a.dataset.jump; if(location.hash==="#events") route(); }));
+$("#menuBtn").addEventListener("click",()=>{ const o=$("#nav").classList.toggle("open"); $("#menuBtn").setAttribute("aria-expanded",o); });
+
+/* ===== Countdown ===== */
+function tick(){
+  const now = new Date();
+  let target = EVENT_START, label = "개막까지";
+  if(now >= EVENT_START && now < EVENT_END){ target = EVENT_END; label = "지금 행사 진행 중 · 폐막까지"; }
+  if(now >= EVENT_END){ $("#cdLabel").textContent="2026 잡 페스티벌이 마무리되었습니다"; ["D","H","M","S"].forEach(k=>$("#cd"+k).textContent="00"); return; }
+  let diff = Math.max(0, target-now)/1000;
+  const d=Math.floor(diff/86400); diff-=d*86400;
+  const h=Math.floor(diff/3600); diff-=h*3600;
+  const m=Math.floor(diff/60); const s=Math.floor(diff-m*60);
+  $("#cdLabel").textContent=label;
+  $("#cdD").textContent=String(d).padStart(2,"0"); $("#cdH").textContent=String(h).padStart(2,"0");
+  $("#cdM").textContent=String(m).padStart(2,"0"); $("#cdS").textContent=String(s).padStart(2,"0");
+}
+tick(); setInterval(tick,1000);
+
+/* ===== Video ===== */
+$("#playBtn").addEventListener("click",()=>{
+  if(videoConfig.src){
+    $("#videoBox").innerHTML = `<iframe src="${videoConfig.src}" title="2025 잡 페스티벌 현장 스케치" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+  } else toast("현장 스케치 영상은 곧 공개됩니다");
+});
+
+/* ===== Booth data (리플렛 배치도 기준) ===== */
+const BOOTHS = {
+  "1":{A01:"경상북도청",A02:"경상북도개발공사",A03:"(재)경북연구원",A04:"경북바이오산업연구원",A05:"안동시시설관리공단",A06:"(재)한국정신문화재단",
+    A07:"경상북도문화관광공사",A08:"경북신용보증재단",A09:"경상북도안동의료원",A10:"(재)한국로봇산업진흥원",A11:"한국미래농업연구원",A12:"한국수력원자력",
+    B01:"(주)플랜텍",B02:"(주)고아정공",B03:"올품",B04:"(주)파머스바이오",B05:"(주)대명화학",B06:"SK플라즈마(주)",
+    B07:"삼호개발(주)",B08:"농협사료",B09:"(주)삼보모터스",B10:"경창산업(주)",B11:"일진그룹(베어링아트)",B12:"(주)세원물산",
+    H01:"고용노동부 / 국민취업지원제도",H02:"운영본부",H03:"대학일자리플러스센터 / 학생성공센터(예천)",H04:"학생상담센터",
+    H05:"농협중앙회",H06:"한국전력공사",H07:"한국철도공사",H08:"육군본부",
+    E01:"타로",E02:"동양대학교 / 지문적성검사",E03:"퍼스널컬러",E04:"취업 증명사진"},
+  "2":{A01:"경상북도청",A02:"경상북도개발공사",A03:"(재)경북연구원",A04:"경북바이오산업연구원",A05:"안동시시설관리공단",A06:"(재)한국정신문화재단",
+    A07:"(재)경북테크노파크",A08:"한국부동산원",A09:"한국산업단지공단",A10:"건강보험공단",A11:"안동성소병원",A12:"한국도로공사",
+    B01:"(주)플랜텍",B02:"코아오토모티브&고아정공",B03:"올품",B04:"(주)파머스바이오",B05:"(주)금창",B06:"SK바이오사이언스㈜",
+    B07:"오케이에프음료㈜(OKF)",B08:"엔티1",B09:"조일알미늄(주)",B10:"글로컬대학사업단",B11:"대학원",B12:"대외협력본부",
+    H01:"고용노동부 / 국민취업지원제도",H02:"운영본부",H03:"대학일자리플러스센터 / 학생성공센터(예천)",H04:"학생상담센터",
+    H05:"한국전력공사",H06:"농협중앙회",H07:"병무청 / 50사단 예비군",H08:"육군본부",
+    E01:"타로",E02:"안동형일자리사업단",E03:"퍼스널컬러",E04:"취업 증명사진"}
+};
+const DAY_LABEL = {"1":"9.30(수)","2":"10.1(목)"};
+const norm = s => s.replace(/\(주\)|㈜|\(재\)|\s/g,"");
+const sameOrg = (a,b) => { const x=norm(a), y=norm(b); return x===y || x.includes(y) || y.includes(x); };
+function boothOf(day,name){ const hit = Object.entries(BOOTHS[day]).find(([,n])=>sameOrg(n,name)); return hit ? hit[0] : null; }
+function findCompany(name){ return companies.find(c=>sameOrg(c.name,name)); }
+
+/* ===== Program (리플렛 기업설명회 시간표) ===== */
+const TIMETABLE = {
+  "1":[
+    {time:"10:00–10:10",kind:"행사",title:"개회식"},
+    {time:"10:10–10:30",kind:"행사",title:"내빈인사 및 부스안내"},
+    {time:"10:30–11:50",cos:["육군본부"]},
+    {time:"12:00–13:30",kind:"휴식",title:"중식 / 휴식시간"},
+    {time:"14:00–16:00",cos:["한국수력원자력","한국미래농업연구원","농협사료"]},
+    {time:"16:30–17:00",kind:"이벤트",title:"경품추첨 등",link:"draw"}
+  ],
+  "2":[
+    {time:"10:00–10:30",kind:"행사",title:"감사패 전달 / 부스인사"},
+    {time:"10:30–11:30",cos:["농협중앙회"]},
+    {time:"12:00–13:30",kind:"휴식",title:"중식 / 휴식시간"},
+    {time:"14:00–15:30",cos:["한국부동산원","(주)고아정공"]},
+    {time:"15:30–16:30",kind:"취업특강",title:"AI 면접 및 자기소개서 활용법",by:"에듀스"},
+    {time:"16:30–17:00",kind:"이벤트",title:"경품추첨 등",link:"draw"}
+  ]
+};
+function renderSchedule(day){
+  $("#schedule").innerHTML = TIMETABLE[day].map(s=>{
+    let body;
+    if(s.cos){
+      body = s.cos.map(n=>{
+        const code = boothOf(day,n);
+        return `<button class="session key" data-co="${n}" data-day="${day}" data-time="${s.time}"><span class="where">기업설명회${code?` · 부스 ${code}`:""}</span><b>${n}</b></button>`;
+      }).join("");
+    } else if(s.kind==="휴식"){
+      body = `<div class="session lunch"><span class="where">휴식</span><b>${s.title}</b></div>`;
+    } else if(s.link){
+      body = `<a class="session" href="#events" data-jump="${s.link}"><span class="where">${s.kind}</span><b>${s.title}</b></a>`;
+    } else {
+      body = `<div class="session plain"><span class="where">${s.kind}${s.by?` · ${s.by}`:""}</span><b>${s.title}</b></div>`;
+    }
+    return `<div class="slot"><div class="slot-time">${s.time}<small>${DAY_LABEL[day]} · ${s.cos?`기업설명회 ${s.cos.length}곳`:s.kind}</small></div><div class="slot-body">${body}</div></div>`;
+  }).join("");
+}
+$$(".ptab").forEach(t=>t.addEventListener("click",()=>{
+  $$(".ptab").forEach(x=>x.setAttribute("aria-selected", x===t)); renderSchedule(t.dataset.day);
+}));
+renderSchedule("1");
+function openCompanyModal(name, day, time){
+  const c = findCompany(name), code = boothOf(day,name);
+  $("#mTitle").textContent = name;
+  $("#mWhere").textContent = `${DAY_LABEL[day]} ${time} 기업설명회${code?` · 부스 ${code}`:""}`;
+  $("#mDesc").textContent = c ? `${c.region} · ${c.biz}` : "";
+  const m = $("#mMap");
+  m.hidden = !code; m.dataset.d = day; m.dataset.code = code || "";
+  $("#modal").classList.add("open"); $("#mClose").focus();
+}
+$("#schedule").addEventListener("click",e=>{
+  const j = e.target.closest("[data-jump]"); if(j){ pendingJump = j.dataset.jump; return; }
+  const b = e.target.closest("[data-co]"); if(!b) return;
+  openCompanyModal(b.dataset.co, b.dataset.day, b.dataset.time);
+});
+$("#mMap").addEventListener("click",e=>{
+  pendingBooth = {d:e.currentTarget.dataset.d, code:e.currentTarget.dataset.code};
+  closeModal();
+});
+function closeModal(){ $("#modal").classList.remove("open"); }
+$("#mClose").addEventListener("click",closeModal);
+$("#modal").addEventListener("click",e=>{ if(e.target.id==="modal") closeModal(); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") closeModal(); });
+
+const booths = [
+  ["국립경국대학교 취업진로본부 대학일자리플러스센터 (H03)","센터 안내, 프로그램 안내, 취업상담, 취업컨설팅"],
+  ["국립경국대학교 학생상담센터 (H04)","심리상담, 심리검사, 프로그램 안내"],
+  ["고용노동부 안동지청 (H01)","국민취업지원제도 등 지원제도 안내, 취업프로그램 안내, 취업상담"],
+  ["병무청 (10.1 H07)","병역진로설계센터: 병무지원서비스, 병역진로설계 안내 (50사단 예비군 함께 운영)"],
+  ["경북 북부권대학 연합","프로그램 운영, 취업프로그램 안내, 학생 참가지도"],
+  ["국립경국대학교 부서 (10.1 B10–B12, E02)","글로컬대학사업단, 대학원, 대외협력본부, 안동형일자리사업단 등"],
+  ["이벤트 부스 (E01–E04)","타로, 지문적성검사, 퍼스널컬러, 취업 증명사진"]
+];
+$("#booths").innerHTML = booths.map((b,i)=>`<div class="booth"><div class="n">지원 부스</div><h4>${b[0]}</h4><p>${b[1]}</p></div>`).join("");
+
+/* ===== Companies ===== */
+// b: 양일 참가, t: 채용설명회, n: 2026 신규
+const companies = [
+  ["경북바이오산업연구원","경북 안동시","연구개발, 분석검사, 용역수행","연구개발",1,0,0],
+  ["경북신용보증재단","경북 구미시","보증보험업 / 신용보증","공공·공기업",0,0,0],
+  ["(재)경북연구원","경북 예천군","공공연구기관 / 지역연구 및 정책개발","연구개발",1,0,0],
+  ["경상북도개발공사","경북 예천군","건설업 / 택지개발, 주택건설","공공·공기업",1,0,0],
+  ["(재)경북테크노파크","경북 경산시","공학 연구개발 / 개발·교육용역","연구개발",0,0,0],
+  ["경상북도문화관광공사","경북 경주시","관광홍보, 산업진흥 행정","공공·공기업",0,0,0],
+  ["경상북도안동의료원","경북 안동시","종합병원 / 진료 및 질병 관리·예방","의료·바이오",0,0,0],
+  ["경상북도청","경북 예천군","관공서 / 경상북도 행정 총괄","공공·공기업",1,0,0],
+  ["국민건강보험공단","경북 안동시","국민건강보험사업(자격관리, 보험료 징수 등)","공공·공기업",0,0,1],
+  ["경창산업(주)","대구 달서구","자동차부품(변속기 부품, 레버, 페달) 제조","제조",0,0,0],
+  ["㈜금창","경북 영천시","자동차부품 제조","제조",0,0,0],
+  ["농협중앙회","경북 안동시","금융 서비스 및 농산물 판매","금융·서비스",1,1,0],
+  ["농협사료","경북 안동시","배합·보조 사료 제조, 도매, 무역","제조",0,1,1],
+  ["㈜대명화학","경북 문경시","PE필름, 부직포 등 제조","제조",0,0,0],
+  ["도우인시스","충북 청주시","액정표시장치 제조","제조",0,0,1],
+  ["삼호개발㈜","서울 서초구","건설 (삼호개발/삼호씨엔엠)","건설·플랜트",0,0,0],
+  ["㈜세원물산","경북 영천시","자동차 차체부품 제조","제조",0,0,0],
+  ["안동성소병원","경북 안동시","종합병원","의료·바이오",0,0,0],
+  ["안동시시설관리공단","경북 안동시","체육청소년, 관광문화, 주민복지, 환경시설","공공·공기업",1,0,0],
+  ["SK바이오사이언스㈜","경북 안동시","백신 및 의약품 제조","의료·바이오",0,0,0],
+  ["SK플라즈마㈜","경북 안동시","혈액제제·의약품 제조, 도소매","의료·바이오",0,0,0],
+  ["㈜삼보모터스","대구 달서구","자동차부품 제조","제조",0,0,0],
+  ["육군본부","충남 계룡시","육군 학사장교 제도 및 지원과정 안내","공공·공기업",1,1,0],
+  ["오케이에프음료㈜(OKF)","경북 안동시","음료·식품 제조","제조",0,0,0],
+  ["일진그룹(베어링아트)","경북 영주시","자동차부품(베어링류) 제조","제조",0,0,0],
+  ["㈜올품","경북 상주시","닭고기 제품 가공·제조, 도소매","제조",0,0,1],
+  ["엔티1","서울 영등포구","영업·마케팅 / AI 로봇 자율주행","금융·서비스",0,0,1],
+  ["조일알미늄㈜","경북 경산시","알루미늄 압연제품 생산","제조",0,0,0],
+  ["㈜고아정공","경북 의성군","자동차용 전기장치 제조","제조",1,1,1],
+  ["㈜플랜텍","경북 포항시","산업플랜트 건설, 제철 설비 제작","건설·플랜트",1,0,0],
+  ["㈜파머스바이오","경북 안동시","낫또 제조·판매","제조",1,0,1],
+  ["한국도로공사","경북 김천시","고속도로 신설·확장 및 유지관리","공공·공기업",0,0,0],
+  ["(재)한국로봇산업진흥원","대구 북구","지능형 로봇 보급 및 확산사업","연구개발",0,0,0],
+  ["한국미래농업연구원","경북 안동시","지속가능한 농업 과학기술 개발","연구개발",0,1,0],
+  ["한국수력원자력","경북 경주시","원자력 발전, 전력자원 개발","공공·공기업",0,1,0],
+  ["한국전력공사","경북 안동시","송전·변전·배전 등 전력사업","공공·공기업",1,0,0],
+  ["한국산업단지공단","대구 동구","산업단지 개발·조성, 분양·임대","공공·공기업",0,0,0],
+  ["한국부동산원","경북 안동시","부동산 개발·컨설팅","공공·공기업",0,1,1],
+  ["(재)한국정신문화재단","경북 안동시","인문가치포럼, 안동국제컨벤션센터 운영","공공·공기업",1,0,0],
+  ["한국철도공사","경북 영주시","철도 여객 운송","공공·공기업",0,0,0]
+].map((c,i)=>({id:i,name:c[0],region:c[1],biz:c[2],sector:c[3],both:!!c[4],talk:!!c[5],isNew:!!c[6]}));
+companies.forEach(c=>{ c.booths=[]; ["1","2"].forEach(d=>{ const code=boothOf(d,c.name); if(code) c.booths.push({d,code}); }); });
+
+const sectors = ["전체", ...new Set(companies.map(c=>c.sector))];
+let fSector="전체", fFlags=new Set(), fQuery="";
+let favs = new Set(store.get("jf-favs", []));
+$("#sectorChips").innerHTML = sectors.map(s=>`<button class="chip" data-sector="${s}" aria-pressed="${s==="전체"}">${s}</button>`).join("");
+$("#sectorChips").addEventListener("click",e=>{
+  const b=e.target.closest("[data-sector]"); if(!b) return;
+  fSector=b.dataset.sector; $$("#sectorChips .chip").forEach(x=>x.setAttribute("aria-pressed", x===b)); renderCos();
+});
+$("#flagChips").addEventListener("click",e=>{
+  const b=e.target.closest("[data-flag]"); if(!b) return;
+  const f=b.dataset.flag; fFlags.has(f)?fFlags.delete(f):fFlags.add(f);
+  b.setAttribute("aria-pressed", fFlags.has(f)); renderCos();
+});
+$("#coSearch").addEventListener("input",e=>{ fQuery=e.target.value.trim(); renderCos(); });
+$("#favShow").addEventListener("click",()=>{
+  fFlags.add("fav"); $("[data-flag='fav']").setAttribute("aria-pressed","true"); renderCos(); window.scrollTo({top:0,behavior:"smooth"});
+});
+function renderCos(){
+  const q=fQuery.toLowerCase();
+  const list = companies.filter(c=>
+    (fSector==="전체"||c.sector===fSector) &&
+    (!fFlags.has("d1")||c.booths.some(b=>b.d==="1")) && (!fFlags.has("d2")||c.booths.some(b=>b.d==="2")) && (!fFlags.has("talk")||c.talk) &&
+    (!fFlags.has("new")||c.isNew) && (!fFlags.has("fav")||favs.has(c.id)) &&
+    (!q || (c.name+c.region+c.biz+c.sector+c.booths.map(b=>b.code).join(" ")).toLowerCase().includes(q))
+  );
+  $("#coCount").textContent = `${companies.length}개 중 ${list.length}개 표시`;
+  $("#coGrid").innerHTML = list.length ? list.map(c=>`
+    <article class="co">
+      <div class="co-top"><div><h4>${c.name}</h4><div class="region">${c.region} · ${c.sector}</div></div>
+      <button class="star" data-fav="${c.id}" aria-pressed="${favs.has(c.id)}" aria-label="${c.name} 관심 기업 ${favs.has(c.id)?"해제":"추가"}">★</button></div>
+      <div class="biz">${c.biz}</div>
+      <div class="badges">
+        ${c.booths.map(b=>`<button class="badge both" data-map="${b.d}|${b.code}" aria-label="${DAY_LABEL[b.d]} 부스 ${b.code} 배치도에서 보기">${DAY_LABEL[b.d]} · ${b.code}</button>`).join("") || '<span class="badge">부스 추후 안내</span>'}
+        ${c.talk?'<span class="badge talk">채용설명회</span>':""}
+        ${c.isNew?'<span class="badge new">2026 신규</span>':""}
+      </div>
+    </article>`).join("")
+    : `<div class="empty" style="grid-column:1/-1">조건에 맞는 기업이 없습니다. 검색어나 필터를 바꿔 보세요.</div>`;
+  const n=favs.size; $("#favBar").hidden = n===0;
+  $("#favText").textContent = `관심 기업 ${n}곳을 저장했습니다`;
+}
+$("#coGrid").addEventListener("click",e=>{
+  const mp=e.target.closest("[data-map]");
+  if(mp){ const [d,code]=mp.dataset.map.split("|"); pendingBooth={d,code}; location.hash="#venue"; return; }
+  const b=e.target.closest("[data-fav]"); if(!b) return;
+  const id=+b.dataset.fav, name=companies[id].name;
+  if(favs.has(id)){ favs.delete(id); toast(`${name}을(를) 관심 기업에서 뺐습니다`); }
+  else { favs.add(id); toast(`${name}을(를) 관심 기업에 추가했습니다`); }
+  store.set("jf-favs",[...favs]); renderCos();
+});
+renderCos();
+
+/* ===== Checklist ===== */
+const checks = ["이력서 출력본 준비","자기소개서 출력본 준비","지원 기업 정보·인재상 확인","1분 자기소개 연습","단정한 복장 준비"];
+let checked = new Set(store.get("jf-checks", []));
+function renderChecks(){
+  $("#checklist").innerHTML = checks.map((c,i)=>`<label class="${checked.has(i)?"done":""}"><input type="checkbox" data-c="${i}" ${checked.has(i)?"checked":""}> ${c}</label>`).join("");
+}
+$("#checklist").addEventListener("change",e=>{
+  const i=+e.target.dataset.c; e.target.checked?checked.add(i):checked.delete(i);
+  store.set("jf-checks",[...checked]); renderChecks();
+  if(checked.size===checks.length) toast("현장 면접 준비를 마쳤습니다");
+});
+renderChecks();
+
+/* ===== Stamp card ===== */
+const stamps = ["기업상담 1","기업상담 2","기업상담 3","기업상담 4"];
+let got = new Set(store.get("jf-mission", []));
+function renderStamps(){
+  $("#stampGrid").innerHTML = stamps.map((s,i)=>`<button class="stamp ${got.has(i)?"on":""}" data-s="${i}" aria-pressed="${got.has(i)}">${got.has(i)?"✓<br>":""}${s}</button>`).join("");
+  $("#stampBar").style.width = (got.size/stamps.length*100)+"%";
+  $("#stampMsg").textContent = got.size===stamps.length ? "서명 4개를 모았습니다. 운영본부(H02)에서 QR 설문조사를 작성하고 경품쿠폰을 받으세요."
+    : `기업상담 서명 ${got.size} / ${stamps.length}`;
+}
+$("#stampGrid").addEventListener("click",e=>{
+  const b=e.target.closest("[data-s]"); if(!b) return;
+  const i=+b.dataset.s; got.has(i)?got.delete(i):got.add(i);
+  store.set("jf-mission",[...got]); renderStamps();
+});
+$("#stampReset").addEventListener("click",()=>{ got.clear(); store.set("jf-mission",[]); renderStamps(); });
+renderStamps();
+
+/* ===== Draw simulation ===== */
+let drawing=false;
+$("#drawBtn").addEventListener("click",()=>{
+  if(drawing) return; drawing=true;
+  const win=$("#drawWin"), btn=$("#drawBtn"); btn.disabled=true; btn.textContent="추첨 중…";
+  const final = Math.floor(Math.random()*300)+1; let n=0;
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const iv=setInterval(()=>{
+    win.textContent="No. "+String(Math.floor(Math.random()*300)+1).padStart(3,"0");
+    if(++n>(reduce?1:26)){
+      clearInterval(iv); win.textContent="No. "+String(final).padStart(3,"0");
+      btn.disabled=false; btn.textContent="다시 체험하기"; drawing=false;
+      toast(`체험 추첨 결과: ${final}번`);
+    }
+  },70);
+});
+
+/* ===== Venue: site map ===== */
+let layoutDay = "1", selBooth = null;
+const hallPos = (()=>{
+  const p = {};
+  for(let i=0;i<10;i++){
+    const n = String(12-i).padStart(2,"0");
+    p["A"+n] = [40,110+i*42,40,40];
+    p["B"+n] = [520,110+i*42,40,40];
+  }
+  p.A02=[96,545,46,28]; p.A01=[144,545,46,28]; p.B01=[410,545,46,28]; p.B02=[458,545,46,28];
+  ["H08","H07","H06","H05"].forEach((c,i)=>p[c]=[180+i*62,420,60,30]);
+  ["H01","H02","H03","H04"].forEach((c,i)=>p[c]=[180+i*62,452,60,30]);
+  ["E01","E02","E03","E04"].forEach((c,i)=>p[c]=[170+i*67,240,62,30]);
+  return p;
+})();
+const BOOTH_COLOR = {A:"#26408f",B:"#2f8bd3",H:"#3a9a74",E:"#d9577f"};
+const BOOTH_TYPE = {A:"기업·기관 부스",B:"기업·기관 부스",H:"지원기관·운영 부스",E:"이벤트 부스"};
+function renderLayout(){
+  const names = BOOTHS[layoutDay];
+  $("#boothLayer").innerHTML = Object.entries(hallPos).map(([code,[x,y,w,h]])=>{
+    const sel = code===selBooth;
+    return `<g class="booth-g" data-code="${code}" tabindex="0" role="button" aria-label="${code} ${names[code]}">
+      <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="3" fill="${BOOTH_COLOR[code[0]]}" ${sel?'stroke="#f4b400" stroke-width="5"':''}/>
+      <text x="${x+w/2}" y="${y+h/2+4}" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">${code}</text></g>`;
+  }).join("");
+  $("#boothSelect").innerHTML = `<option value="">기업·기관을 고르세요</option>` +
+    Object.entries(names).map(([c,n])=>`<option value="${c}" ${c===selBooth?"selected":""}>${c} · ${n}</option>`).join("");
+  showBooth();
+}
+function showBooth(){
+  if(!selBooth){ $("#boothInfo").innerHTML = "부스를 누르거나 목록에서 기업을 고르면 위치와 정보를 보여줍니다."; return; }
+  const name = BOOTHS[layoutDay][selBooth], c = findCompany(name);
+  $("#boothInfo").innerHTML = `<strong>${selBooth} · ${name}</strong><br>${DAY_LABEL[layoutDay]} ${BOOTH_TYPE[selBooth[0]]}` +
+    (c ? `<br><span style="color:var(--muted)">${c.region} · ${c.biz}</span>` : "");
+}
+function syncLayoutTabs(){ $$(".ltab").forEach(x=>x.setAttribute("aria-selected", x.dataset.lday===layoutDay)); }
+$$(".ltab").forEach(t=>t.addEventListener("click",()=>{ layoutDay=t.dataset.lday; syncLayoutTabs(); renderLayout(); }));
+$("#boothLayer").addEventListener("click",e=>{ const g=e.target.closest("[data-code]"); if(!g) return; selBooth=g.dataset.code; renderLayout(); });
+$("#boothLayer").addEventListener("keydown",e=>{
+  if(e.key!=="Enter" && e.key!==" ") return;
+  const g=e.target.closest("[data-code]"); if(!g) return;
+  e.preventDefault(); selBooth=g.dataset.code; renderLayout();
+  const again=$(`#boothLayer [data-code="${selBooth}"]`); again && again.focus();
+});
+$("#boothSelect").addEventListener("change",e=>{ selBooth=e.target.value||null; renderLayout(); });
+$("#copyAddr").addEventListener("click",async()=>{
+  try{ await navigator.clipboard.writeText("경북 안동시 경동로 1375 국립경국대학교"); toast("주소를 복사했습니다"); }
+  catch(e){ toast("경북 안동시 경동로 1375"); }
+});
+
+/* ===== Contact ===== */
+$("#copyTel").addEventListener("click",async()=>{
+  try{ await navigator.clipboard.writeText("054-820-7082"); toast("대표번호를 복사했습니다"); }
+  catch(e){ toast("054-820-7082"); }
+});
+
+/* ===== To top ===== */
+window.addEventListener("scroll",()=>$("#toTop").classList.toggle("show", scrollY>600),{passive:true});
+$("#toTop").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+renderLayout();
+route();
+</script>
+</body>
+</html>
